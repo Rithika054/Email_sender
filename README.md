@@ -13,7 +13,7 @@ Fields: subject, body, sender, recipient
 Technology: Flask, FlaskMail
 LLM Setup:
 
-Example Prompt: "Send an email to manangupta@gmail.com for Leave Approval"
+Example Prompt: "Send an email to xxx@gmail.com for Leave Approval"
 
 Steps:
 
