@@ -53,4 +53,4 @@ workflow.set_finish_point("mail_sender")
 
 app = workflow.compile()
 
-recipients = app.invoke("Can you generate an email for an offer going of 50% off on all items on Zomato and send this email to jkmarpoo@gmail.com using the relevant subject and sender as info@zomato.com.")
+recipients = app.invoke("Can you generate an email for an offer going of 50% off on all items on Zomato and send this email to <your_email>@gmail.com using the relevant subject and sender as info@zomato.com.")
