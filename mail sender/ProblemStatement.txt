@@ -1,0 +1,47 @@
+Problem statement - 
+
+On the basis of user prompt, Send an email with the generated body by using LLM Agents
+
+
+
+1) Create an API to send emails -> subject , body, sender, recipient
+Flask - flask_mail
+
+2) LLM setup - 
+
+-> Send an email to manangupta@gmail.com for Leave Approval
+ |
+
+LLM -> Extract the recipient email address from the below data -> 'Send an email to manangupta@gmail.com for Leave Approval'
+
+Response from LLM1  = 'manangupta@gmail.com'
+
+Using LLM -> Create the email body and subject for the following context -> 'Send an email to manangupta@gmail.com for Leave Approval'
+
+Response from LLM2 -> <BODY OF EMAIL FOR LEAVE APPROVAL REQUEST>    
+
+Responder LLM -> 
+
+Give the output in the following format -> 
+{
+    "subject": <Response from LLM2>,
+    "message": <Response from LLM2>,
+    "sender": <Response from LLM1>,
+    "recipients": "manangupta852@gmail.com"
+}
+
+
+Call the Flask API using Agent to send an email using the above request data 
+
+
+Your task is to provide only the data in the given json format on the basis of the user query. Nothing more, just the data. Following is the user query:
+
+Can you generate an email for an offer going of 50% off on all items on Zomato and send this email to manan@gmail.com using the relevant subject and sender as info@zomato.com.
+
+Output format - 
+{
+    "subject":  <Generate the subject and replace here>,
+    "message": <Generate the message and replace here>,
+    "sender": <Extract from the given query and replace>,
+    "recipients": <Extract from the given query and replace>
+}
